@@ -9,8 +9,12 @@
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-gap: 1.5rem;
+    margin: 1rem 0;
 }
 
+.item p {
+    margin: 0;
+}
 
 .orderSheet button {
     background: #FFB4B4; 
