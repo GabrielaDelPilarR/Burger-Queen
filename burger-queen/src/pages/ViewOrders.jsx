@@ -15,7 +15,7 @@ export default function Orders() {
 
   const viewOrders = () => {
     return orders.map((one) => (
-      <Order id={one.id} client={one.client} products={one.products} />
+      <Order key={one.id} id={one.id} client={one.client} products={one.products} />
     ));
   };
 
