@@ -23,7 +23,7 @@ const postOrder = async (client, order) => {
     },
   });
 
-  console.log("hola", JSON.stringify(request));
+  console.log("hola", request);
 };
 
 export default postOrder;
