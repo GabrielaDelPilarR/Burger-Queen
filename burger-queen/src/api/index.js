@@ -33,6 +33,7 @@ server.post("/orders", async (req, res) => {
     const today = new Date();
     const now = today.toLocaleDateString();
     const order = {
+      id: req.body.id,
       userId: req.body.userId,
       client: req.body.client,
       products: req.body.products,

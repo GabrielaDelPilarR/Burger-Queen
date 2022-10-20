@@ -1,24 +1,25 @@
-import { OrderButtons } from "../Button/Button";
-import style from "./Sheets.module.css";
+import style from './Sheets.module.css'
 
-function Order({ id, client, products }) {
-  const oneItem = products.map((product) => {
-    return (
-      <div className={style.oneItem} key={product.id}>
-        <p>{product.product}</p>
-        <p>{product.qyt}</p>
-      </div>
-    );
-  });
-
-  return (
-    <div className={style.order}>
-      <h3> Pedido #{id}</h3>
-      <p> Cliente: {client}</p>
-      {oneItem}
-      <OrderButtons />
+function ChefOrders ({id, client, products, status}) {
+  const eachProduct = products.map(product => (
+    <div className={style.pendingItem}>
+      <p>{product.quantity}</p>
+      <p>{product.name}</p>
     </div>
-  );
+  ))
+  return(
+    <div className={style.pendingOrder}>
+      <h3> Orden N°{id}</h3>
+      <h4> Cliente: {client} </h4>
+      <div className={style.pendingProducts}>
+        {eachProduct}
+      </div>
+      <div className={style.buttonContainer}>
+        <button className={style.pendingButton}>{status}</button>
+      </div>
+      
+    </div>
+  )
 }
 
-export default Order;
+export {ChefOrders}
