@@ -11,7 +11,7 @@ import NavWaiter from "../components/Nav/NavWaiter.jsx";
 export default function Waiter() {
   const [products, setProducts] = useState([]);
   const [type, setType] = useState("Breakfast");
-  const [order, setOrder] = useState([]);
+  const [productsInOrder, setProductsInOrder] = useState([]);
 
   useEffect(() => {
     peticionHTTP(setProducts);
@@ -19,11 +19,11 @@ export default function Waiter() {
 
   const filteredProducts = products.filter((product) => product.type === type);
 
-  const repeatedProduct = (id) => order.find((obj) => obj.id === id);
+  const repeatedProduct = (id) => productsInOrder.find((obj) => obj.id === id);
 
   const addProducts = (product) => {
     if (repeatedProduct(product.id)) {
-      const addQtyPrice = order.map((item) => {
+      const addQtyPrice = productsInOrder.map((item) => {
         if (item.id === product.id) {
           const newOrder = item;
           newOrder.quantity += 1;
@@ -31,8 +31,8 @@ export default function Waiter() {
         }
         return item;
       });
-      setOrder(addQtyPrice);
-    } else setOrder([...order, { ...product, quantity: 1 }]);
+      setProductsInOrder(addQtyPrice);
+    } else setProductsInOrder([...productsInOrder, { ...product, quantity: 1 }]);
     //console.log(order, "arrayorder");
   };
 
@@ -40,7 +40,7 @@ export default function Waiter() {
     products.find((product) => product.id === id).price;
 
   const deleteItem = (product) => {
-    const deletedProduct = order.reduce((acc, elem) => {
+    const deletedProduct = productsInOrder.reduce((acc, elem) => {
       if (elem.id === repeatedProduct(product.id).id) {
         if (elem.quantity > 1) {
           elem.quantity--;
@@ -52,11 +52,11 @@ export default function Waiter() {
       }
       return acc;
     }, []);
-    setOrder(deletedProduct);
+    setProductsInOrder(deletedProduct);
   };
 
   let total = 0;
-  order.forEach((item) => {
+  productsInOrder.forEach((item) => {
     total += item.price;
     return total;
   });
@@ -88,7 +88,7 @@ export default function Waiter() {
             />
           ))}
         </div>
-        <OrderSheet items={order} total={total} onDeleteItem={deleteItem} />
+        <OrderSheet items={productsInOrder} total={total} onDeleteItem={deleteItem} />
       </div>
     </>
   );

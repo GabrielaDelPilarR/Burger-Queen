@@ -13,16 +13,16 @@ export default function Orders() {
     getOrders(setOrders);
   }, []);
 
-  const viewOrders = () => {
+  /*const viewOrders = () => {
     return orders.map((one) => (
       <Order key={one.id} id={one.id} client={one.client} products={one.products} />
     ));
-  };
+  };*/
 
   return (
     <>
       <Header img={mesero} view={'waiter'} nav={<NavWaiter/>}/>
-      <div className={style.containerOrders}>{viewOrders()}</div>
+      <div className={style.containerOrders}></div>
     </>
   );
 }
