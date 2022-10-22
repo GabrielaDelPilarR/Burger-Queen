@@ -32,7 +32,8 @@ export default function Waiter() {
         return item;
       });
       setProductsInOrder(addQtyPrice);
-    } else setProductsInOrder([...productsInOrder, { ...product, quantity: 1 }]);
+    } else
+      setProductsInOrder([...productsInOrder, { ...product, quantity: 1 }]);
     //console.log(order, "arrayorder");
   };
 
@@ -54,6 +55,8 @@ export default function Waiter() {
     }, []);
     setProductsInOrder(deletedProduct);
   };
+
+  const borraYaPlis = () => setProductsInOrder([])
 
   let total = 0;
   productsInOrder.forEach((item) => {
@@ -88,7 +91,13 @@ export default function Waiter() {
             />
           ))}
         </div>
-        <OrderSheet items={productsInOrder} total={total} onDeleteItem={deleteItem} />
+        <OrderSheet
+          items={productsInOrder}
+          total={total}
+          onDeleteItem={deleteItem}
+          onSendOrder={borraYaPlis}
+        >
+        </OrderSheet>
       </div>
     </>
   );

@@ -15,4 +15,18 @@ function Modal({ children, state, onChangeState }) {
   );
 }
 
-export default Modal;
+function ModalSendOrder({ children, state }) {
+    return (
+      <>
+        {state && (
+          <div className={style.backgroundModal}>
+            <div className={style.modalCard}>
+              {children}
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
+
+export {Modal, ModalSendOrder};

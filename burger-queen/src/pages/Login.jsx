@@ -3,7 +3,7 @@ import logo from "../img/logo2.png";
 import "../css/Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Modal from "../components/Modal/Modal";
+import {Modal} from "../components/Modal/Modal";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -22,7 +22,6 @@ function Login() {
     axios
       .post(`${API_URL}`, { email, password })
       .then((res) => {
-        console.log(res.data.token);
         if (res.status === 200) {
           localStorage.setItem("users", JSON.stringify(res.data.token));
           navigate("/products");

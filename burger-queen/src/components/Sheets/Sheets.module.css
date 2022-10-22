@@ -64,7 +64,7 @@
     border: none;
 }
 
-.buttonOrder, .pendingButton{
+.buttonOrder, .pendingButton, .sendOrderButton{
     font-size: 1rem;
     color: #F24A72;
     border-radius: 0.5rem;
