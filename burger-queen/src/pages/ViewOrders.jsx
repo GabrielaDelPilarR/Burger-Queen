@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header/Header.jsx";
 import NavWaiter from "../components/Nav/NavWaiter.jsx";
-import Order from "../components/Sheets/Sheets.jsx";
-import style from "../css/Waiter.module.css";
+//import Order from "../components/Sheets/Sheets.jsx";
+import style from "../pages/Waiter/Waiter.module.css";
 import getOrders from "../functions/getOrders.js";
 import mesero from "../img/mesero.png";
 

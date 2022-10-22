@@ -1,4 +1,4 @@
-import style from "../css/Waiter.module.css";
+import style from "../pages/Waiter/Waiter.module.css";
 import add from "../img/add.png";
 
 function Card({ product, onAddButtonClick }) {

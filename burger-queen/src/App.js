@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.module.css";
-import Login from "./pages/Login";
-import Waiter from "./pages/Waiter";
+import Login from "./pages/Login/Login";
+import Waiter from "./pages/Waiter/Waiter";
 import Orders from "./pages/ViewOrders";
-import Chef from "./pages/Chef";
+import Chef from "./pages/Chef/Chef";
 
 function App() {
   return (

@@ -27,7 +27,7 @@ function OrderSheet({ items, total, onDeleteItem, onSendOrder }) {
   return (
     <>
       <div className={style.orderSheet}>
-        <label htmlFor="client"> Cliente </label>
+        <label htmlFor="client"> Cliente : </label>
         <input
           type="text"
           value={client}
