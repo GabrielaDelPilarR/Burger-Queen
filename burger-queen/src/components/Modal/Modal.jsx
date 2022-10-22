@@ -1,10 +1,18 @@
-export default function Modal({children}) {
-    return (
-        <div className="Background-modal">
-            <div className="Modal-card">
-                <p> Error</p>
-                {children}
-            </div>
+import style from "./Modal.module.css";
+
+function Modal({ children, state, onChangeState }) {
+  return (
+    <>
+      {state && (
+        <div className={style.backgroundModal}>
+          <div className={style.modalCard}>
+            {children}
+            <button className={style.buttonModal} onClick={() => onChangeState(false)}> Cerrar </button>
+          </div>
         </div>
-    )
+      )}
+    </>
+  );
 }
+
+export default Modal;

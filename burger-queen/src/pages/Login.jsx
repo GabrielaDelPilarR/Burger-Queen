@@ -3,16 +3,18 @@ import logo from "../img/logo2.png";
 import "../css/Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Modal from "../components/Modal/Modal";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [modalVisibility, setModalVisibility] = useState(false)
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === "") {
-      return alert("Por favor ingresa tu credencial");
+      setModalVisibility(true)
     }
 
     const API_URL = "http://localhost:3001/auth";
@@ -26,7 +28,7 @@ function Login() {
           navigate("/products");
         }
       })
-      .catch((err) => alert("Ingresa tus datos correctamente"));
+      .catch((err) => setModalVisibility(true));
   };
 
   return (
@@ -52,7 +54,12 @@ function Login() {
           />
           <input type="submit" value="Entrar" />
         </form>
+        
       </div>
+      <Modal state={modalVisibility} onChangeState={setModalVisibility}>
+        <h2>Error</h2>
+        <p>Por favor, ingrese sus datos correctamente</p>
+      </Modal>
     </section>
   );
 }
