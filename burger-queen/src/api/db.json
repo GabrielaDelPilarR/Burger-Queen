@@ -243,6 +243,358 @@
       ],
       "status": "pending",
       "dateEntry": "20/10/2022"
+    },
+    {
+      "id": "004",
+      "userId": "mesero1",
+      "client": "Gabriela",
+      "products": [
+        {
+          "name": "Papas fritas",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Aros de cebolla",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Gaseosa 500ml",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Hamburguesa simple",
+          "price": 20,
+          "quantity": 2
+        },
+        {
+          "name": "Hamburguesa con queso",
+          "price": 15,
+          "quantity": 1
+        },
+        {
+          "name": "Hamburguesa con huevo",
+          "price": 15,
+          "quantity": 1
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "20/10/2022"
+    },
+    {
+      "id": "004",
+      "userId": "mesero1",
+      "client": "Gabriela",
+      "products": [
+        {
+          "name": "Papas fritas",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Aros de cebolla",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Gaseosa 500ml",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Hamburguesa simple",
+          "price": 20,
+          "quantity": 2
+        },
+        {
+          "name": "Hamburguesa con queso",
+          "price": 15,
+          "quantity": 1
+        },
+        {
+          "name": "Hamburguesa con huevo",
+          "price": 15,
+          "quantity": 1
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "20/10/2022"
+    },
+    {
+      "id": "004",
+      "userId": "mesero1",
+      "client": "",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Café con leche",
+          "price": 14,
+          "quantity": 2
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 20,
+          "quantity": 2
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 14,
+          "quantity": 2
+        },
+        {
+          "name": "Papas fritas",
+          "price": 15,
+          "quantity": 3
+        },
+        {
+          "name": "Aros de cebolla",
+          "price": 10,
+          "quantity": 2
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Gaseosa 500ml",
+          "price": 14,
+          "quantity": 2
+        },
+        {
+          "name": "Hamburguesa simple",
+          "price": 10,
+          "quantity": 1
+        },
+        {
+          "name": "Hamburguesa doble",
+          "price": 15,
+          "quantity": 1
+        },
+        {
+          "name": "Hamburguesa con huevo",
+          "price": 15,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "20/10/2022"
+    },
+    {
+      "id": "004",
+      "userId": "mesero1",
+      "client": "golllsls",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Café con leche",
+          "price": 14,
+          "quantity": 2
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 20,
+          "quantity": 2
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 14,
+          "quantity": 2
+        },
+        {
+          "name": "Papas fritas",
+          "price": 15,
+          "quantity": 3
+        },
+        {
+          "name": "Aros de cebolla",
+          "price": 10,
+          "quantity": 2
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Gaseosa 500ml",
+          "price": 14,
+          "quantity": 2
+        },
+        {
+          "name": "Hamburguesa simple",
+          "price": 10,
+          "quantity": 1
+        },
+        {
+          "name": "Hamburguesa doble",
+          "price": 15,
+          "quantity": 1
+        },
+        {
+          "name": "Hamburguesa con huevo",
+          "price": 15,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "20/10/2022"
+    },
+    {
+      "id": 1,
+      "userId": "mesero1",
+      "client": "jaimito",
+      "products": [
+        {
+          "name": "Café con leche",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "quantity": 1
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "20/10/2022"
+    },
+    {
+      "id": 1,
+      "userId": "mesero1",
+      "client": "jorge",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Café con leche",
+          "price": 21,
+          "quantity": 3
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "quantity": 1
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Papas fritas",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Aros de cebolla",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Gaseosa 500ml",
+          "price": 7,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "20/10/2022"
+    },
+    {
+      "id": 2,
+      "userId": "mesero1",
+      "client": "maciel",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 15,
+          "quantity": 3
+        },
+        {
+          "name": "Café con leche",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "20/10/2022"
+    },
+    {
+      "id": 2,
+      "userId": "mesero1",
+      "client": "milet",
+      "products": [
+        {
+          "name": "Papas fritas",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Aros de cebolla",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 5,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "20/10/2022"
     }
   ]
 }
