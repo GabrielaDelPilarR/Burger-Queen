@@ -1,28 +1,35 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import NavWaiter from "../../components/Nav/NavWaiter.jsx";
-//import Order from "../components/Sheets/Sheets.jsx";
-import style from "./Waiter.module.css";
 import getOrders from "../../functions/getOrders.js";
 import mesero from "../../img/mesero.png";
+import style from "./Waiter.module.css"
+import { ChefOrders } from "../../components/Sheets/Sheets";
 
 export default function Orders() {
-  const [orders, setOrders] = useState([]);
+  const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    getOrders(setOrders);
+    getOrders(setAllOrders);
   }, []);
 
-  /*const viewOrders = () => {
-    return orders.map((one) => (
-      <Order key={one.id} id={one.id} client={one.client} products={one.products} />
-    ));
-  };*/
+  const ordersToDeliver = allOrders.filter(
+    (oneOrder) => oneOrder.status === "delivering"
+  );
+  
 
   return (
     <>
       <Header img={mesero} view={'waiter'} nav={<NavWaiter/>}/>
-      <div className={style.containerOrders}></div>
+      <div className={style.containerOrdersToDeliver}>
+        {ordersToDeliver.map(oneOrder => (
+          <ChefOrders key={oneOrder.id}
+          id={oneOrder.id}
+          client={oneOrder.client}
+          products={oneOrder.products}
+          status={oneOrder.status}/>
+        ))}
+      </div>
     </>
   );
 }

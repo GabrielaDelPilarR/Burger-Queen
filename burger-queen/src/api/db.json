@@ -107,55 +107,84 @@
   ],
   "orders": [
     {
+      "id": "001",
       "userId": "mesero1",
-      "client": "Karina",
+      "client": "Cliente",
       "products": [
         {
           "name": "Café americano",
+          "price": 10,
+          "quantity": 2
+        }
+      ],
+      "status": "delivering",
+      "dateEntry": "10/24/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": "002",
+      "userId": "mesero1",
+      "client": "Cliente 2",
+      "products": [
+        {
+          "name": "Papas fritas",
+          "price": 10,
+          "quantity": 2
+        },
+        {
+          "name": "Agua 500ml",
           "price": 5,
           "quantity": 1
         },
         {
-          "name": "Café con leche",
-          "price": 7,
-          "quantity": 1
-        },
-        {
-          "name": "Jugo de frutas al natural",
-          "price": 7,
+          "name": "Hamburguesa simple",
+          "price": 10,
           "quantity": 1
         }
       ],
-      "status": "pending",
-      "dateEntry": "20/10/2022"
+      "status": "delivering",
+      "dateEntry": "10/24/2022",
+      "dateProcessed": ""
     },
     {
+      "id": "003",
       "userId": "mesero1",
-      "client": "Carolina",
+      "client": "Cliente 3",
       "products": [
-        {
-          "name": "Café americano",
-          "price": 5,
-          "quantity": 1
-        },
-        {
-          "name": "Café con leche",
-          "price": 7,
-          "quantity": 1
-        },
-        {
-          "name": "Jugo de frutas al natural",
-          "price": 14,
-          "quantity": 2
-        },
         {
           "name": "Hamburguesa con queso",
           "price": 30,
           "quantity": 2
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 5,
+          "quantity": 1
+        }
+      ],
+      "status": "delivering",
+      "dateEntry": "10/24/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": "004",
+      "userId": "mesero1",
+      "client": "Cliente 4",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "quantity": 1
         }
       ],
       "status": "pending",
-      "dateEntry": "20/10/2022"
+      "dateEntry": "10/24/2022",
+      "dateProcessed": ""
     }
   ]
 }
