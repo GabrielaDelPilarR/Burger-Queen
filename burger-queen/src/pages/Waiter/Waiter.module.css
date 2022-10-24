@@ -95,17 +95,17 @@ img{
     width: 90px;
 }
 
-.containerOrders {
-    padding: 0 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem
-}
-
 span{
     color: #FE724C;
 }
 
 p {
     font-weight: 600;
+}
+
+.containerOrdersToDeliver {
+    padding-inline: 3.6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem
 }

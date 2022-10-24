@@ -31,7 +31,7 @@ server.post("/auth", (req, res) => {
 server.post("/orders", async (req, res) => {
   try {
     const today = new Date();
-    const now = today.toLocaleDateString();
+    const now = today.toLocaleDateString('en-US');
     const order = {
       id: req.body.id,
       userId: req.body.userId,
@@ -39,6 +39,7 @@ server.post("/orders", async (req, res) => {
       products: req.body.products,
       status: "pending",
       dateEntry: now,
+      dateProcessed: ''
     };
     const orders = router.db.get("orders");
     console.log(orders);

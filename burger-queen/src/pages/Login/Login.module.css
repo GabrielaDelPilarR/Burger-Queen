@@ -7,8 +7,8 @@
     background: #FEDDB0;
 }
 
-.background-logo,
-.background-form {
+.backgroundLogo,
+.backgroundForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,7 @@
     padding: 4rem;
 }
 
-.background-logo {
+.backgroundLogo {
     background: #fff;
 }
 
@@ -35,25 +35,25 @@ h1 {
 }
 
 input {
-    border-radius: 10px;
-    padding: 0.75rem;
+    border-radius: 0.5rem;
+    padding: 0.65rem;
     border: none;
     margin: 0 0 1.5rem 0;
     font-size: 0.85rem;
     cursor: pointer;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
     width: 75%;
 }
 
 input[type=submit] {
     background: #FFB4B4;
-    color: #EB6105;
-    width: 20%;
+    color: #F24A72;
+    text-transform: uppercase;
+    width: 25%;
     font-weight: 700;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
 }
 
 form {
