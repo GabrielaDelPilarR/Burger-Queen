@@ -5,14 +5,14 @@ import { ChefOrders } from "../../components/Sheets/Sheets";
 import getOrders from "../../functions/getOrders";
 import style from "./Chef.module.css";
 import chef from "../../img/chef.png";
-import putOrders from "../../functions/putOrders";
+import {putOrders} from "../../functions/putOrders";
 
 function Chef() {
   const [allOrders, setAllOrders] = useState([]);
  
   useEffect(() => {
     getOrders(setAllOrders);
-  }, []);
+  }, [allOrders]);
 
   const newOrders = allOrders.filter(
     (oneOrder) => oneOrder.status === "pending"

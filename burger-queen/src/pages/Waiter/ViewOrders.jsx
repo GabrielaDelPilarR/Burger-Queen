@@ -5,13 +5,14 @@ import getOrders from "../../functions/getOrders.js";
 import mesero from "../../img/mesero.png";
 import style from "./Waiter.module.css"
 import { ChefOrders } from "../../components/Sheets/Sheets";
+import { putOrdersToDelivered } from "../../functions/putOrders";
 
 export default function Orders() {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
     getOrders(setAllOrders);
-  }, []);
+  }, [allOrders]);
 
   const ordersToDeliver = allOrders.filter(
     (oneOrder) => oneOrder.status === "delivering"
@@ -27,7 +28,8 @@ export default function Orders() {
           id={oneOrder.id}
           client={oneOrder.client}
           products={oneOrder.products}
-          status={oneOrder.status}/>
+          status={oneOrder.status}
+          onPutOrders={() => putOrdersToDelivered(oneOrder, oneOrder.id)}/>
         ))}
       </div>
     </>

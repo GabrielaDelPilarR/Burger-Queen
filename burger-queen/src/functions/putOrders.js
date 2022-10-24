@@ -13,4 +13,16 @@ const putOrders = async (order, id) => {
   });
 };
 
-export default putOrders;
+const putOrdersToDelivered = async (order, id) => {
+    let changeOrder = order;
+    changeOrder.status = 'delivered';
+    changeOrder.dateProcessed = new Date().toLocaleDateString('en-US')
+    console.log(changeOrder)
+    await axios.put(API_URL + id, changeOrder, {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+  };
+
+export { putOrders, putOrdersToDelivered };
