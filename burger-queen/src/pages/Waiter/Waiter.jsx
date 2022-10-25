@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
-import Header from "../components/Header/Header.jsx";
-import OrderSheet from "../components/Sheets/OrderSheet.jsx";
-import style from "../css/Waiter.module.css";
-import Card from "../components/Card.jsx";
-import peticionHTTP from "../functions/getProducts";
-import mesero from "../img/mesero.png";
-import NavWaiter from "../components/Nav/NavWaiter.jsx";
+import Header from "../../components/Header/Header.jsx";
+import OrderSheet from "../../components/Sheets/OrderSheet.jsx";
+import style from "./Waiter.module.css";
+import Card from "../../components/Card.jsx";
+import peticionHTTP from "../../functions/getProducts";
+import mesero from "../../img/mesero.png";
+import NavWaiter from "../../components/Nav/NavWaiter.jsx";
 
 export default function Waiter() {
   const [products, setProducts] = useState([]);
@@ -32,7 +32,8 @@ export default function Waiter() {
         return item;
       });
       setProductsInOrder(addQtyPrice);
-    } else setProductsInOrder([...productsInOrder, { ...product, quantity: 1 }]);
+    } else
+      setProductsInOrder([...productsInOrder, { ...product, quantity: 1 }]);
     //console.log(order, "arrayorder");
   };
 
@@ -54,6 +55,8 @@ export default function Waiter() {
     }, []);
     setProductsInOrder(deletedProduct);
   };
+
+  const borraYaPlis = () => setProductsInOrder([])
 
   let total = 0;
   productsInOrder.forEach((item) => {
@@ -88,7 +91,13 @@ export default function Waiter() {
             />
           ))}
         </div>
-        <OrderSheet items={productsInOrder} total={total} onDeleteItem={deleteItem} />
+        <OrderSheet
+          items={productsInOrder}
+          total={total}
+          onDeleteItem={deleteItem}
+          onSendOrder={borraYaPlis}
+        >
+        </OrderSheet>
       </div>
     </>
   );

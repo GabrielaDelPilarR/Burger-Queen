@@ -24,11 +24,11 @@
 }
 
 .containerItem {
-    /*width: 327px;
-    height: 16rem;*/
+    width: 327px;
+    height: 16rem;
     border: rgb(238, 237, 237);
     max-height: 16rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .containerItem::-webkit-scrollbar, .pendingProducts::-webkit-scrollbar{
@@ -64,7 +64,7 @@
     border: none;
 }
 
-.buttonOrder, .pendingButton{
+.buttonOrder, .pendingButton, .sendOrderButton{
     font-size: 1rem;
     color: #F24A72;
     border-radius: 0.5rem;
