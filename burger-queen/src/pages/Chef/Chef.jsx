@@ -5,13 +5,24 @@ import { ChefOrders } from "../../components/Sheets/Sheets";
 import getOrders from "../../functions/getOrders";
 import style from "./Chef.module.css";
 import chef from "../../img/chef.png";
+import {putOrders} from "../../functions/putOrders";
 
 function Chef() {
-  const [newOrders, setNewOrders] = useState([]);
-
+  const [allOrders, setAllOrders] = useState([]);
+ 
   useEffect(() => {
-    getOrders(setNewOrders);
-  }, []);
+    getOrders(setAllOrders);
+  }, [allOrders]);
+
+  const newOrders = allOrders.filter(
+    (oneOrder) => oneOrder.status === "pending"
+  );
+  
+
+  /*const sortNewOrders = newOrders.sort((a, b) =>
+      new Date(a.dateEntry).getTime() > new Date(b.dateEntry).getTime() );
+
+  console.log(sortNewOrders)*/
 
   return (
     <>
@@ -24,6 +35,7 @@ function Chef() {
             client={oneOrder.client}
             products={oneOrder.products}
             status={oneOrder.status}
+            onPutOrders={() => putOrders(oneOrder, oneOrder.id)}
           />
         ))}
       </div>

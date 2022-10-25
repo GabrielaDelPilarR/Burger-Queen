@@ -7,7 +7,12 @@ function Modal({ children, state, onChangeState }) {
         <div className={style.backgroundModal}>
           <div className={style.modalCard}>
             {children}
-            <button className={style.buttonModal} onClick={() => onChangeState(false)}> Cerrar </button>
+            <button
+              className={style.buttonModal}
+              onClick={() => onChangeState(false)}
+            >
+              Cerrar
+            </button>
           </div>
         </div>
       )}
@@ -16,17 +21,15 @@ function Modal({ children, state, onChangeState }) {
 }
 
 function ModalSendOrder({ children, state }) {
-    return (
-      <>
-        {state && (
-          <div className={style.backgroundModal}>
-            <div className={style.modalCard}>
-              {children}
-            </div>
-          </div>
-        )}
-      </>
-    );
-  }
+  return (
+    <>
+      {state && (
+        <div className={style.backgroundModal}>
+          <div className={style.modalCard}>{children}</div>
+        </div>
+      )}
+    </>
+  );
+}
 
-export {Modal, ModalSendOrder};
+export { Modal, ModalSendOrder };
