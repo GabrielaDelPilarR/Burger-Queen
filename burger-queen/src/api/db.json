@@ -142,9 +142,9 @@
           "quantity": 1
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "dateEntry": "10/24/2022",
-      "dateProcessed": "2022-10-24T16:39:19.116Z"
+      "dateProcessed": "10/25/2022"
     },
     {
       "id": "003",
@@ -202,12 +202,12 @@
           "quantity": 2
         }
       ],
-      "status": "delivering",
+      "status": "delivered",
       "dateEntry": "10/24/2022",
-      "dateProcessed": ""
+      "dateProcessed": "10/25/2022"
     },
     {
-      "id": "005",
+      "id": "006",
       "userId": "mesero1",
       "client": "Cliente 6",
       "products": [
@@ -222,8 +222,53 @@
           "quantity": 2
         }
       ],
-      "status": "pending",
+      "status": "delivered",
       "dateEntry": "10/24/2022",
+      "dateProcessed": "10/26/2022"
+    },
+    {
+      "id": "007",
+      "userId": "mesero1",
+      "client": "Gabriela",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 20,
+          "quantity": 2
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "10/25/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": "005",
+      "userId": "mesero1",
+      "client": "Cliente",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Café con leche",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "10/26/2022",
       "dateProcessed": ""
     }
   ]

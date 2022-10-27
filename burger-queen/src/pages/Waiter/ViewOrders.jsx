@@ -12,7 +12,7 @@ export default function Orders() {
 
   useEffect(() => {
     getOrders(setAllOrders);
-  }, [allOrders]);
+  }, []);
 
   const ordersToDeliver = allOrders.filter(
     (oneOrder) => oneOrder.status === "delivering"

@@ -12,12 +12,13 @@ function Chef() {
  
   useEffect(() => {
     getOrders(setAllOrders);
-  }, [allOrders]);
+  }, []);
 
   const newOrders = allOrders.filter(
     (oneOrder) => oneOrder.status === "pending"
   );
   
+   //Hacer una nueva funcion donde se cambie desde el front el status y despues ya hacerle el setAllOrders
 
   /*const sortNewOrders = newOrders.sort((a, b) =>
       new Date(a.dateEntry).getTime() > new Date(b.dateEntry).getTime() );
