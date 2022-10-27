@@ -5,14 +5,24 @@ import getOrders from "../../functions/getOrders.js";
 import mesero from "../../img/mesero.png";
 import style from "./Waiter.module.css"
 import { ChefOrders } from "../../components/Sheets/Sheets";
-import { putOrdersToDelivered } from "../../functions/putOrders";
+import { putOrders } from "../../functions/putOrders";
 
 export default function Orders() {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
     getOrders(setAllOrders);
-  }, [allOrders]);
+  }, []);
+
+  const handleUpdateOrders = async(allOrders, order, id, text)=>{
+    const newAllOrders = [...allOrders]
+    const response = await putOrders( order, id,text)
+    console.log(response)
+    if(response){
+      setAllOrders(newAllOrders)
+    }
+  }
+
 
   const ordersToDeliver = allOrders.filter(
     (oneOrder) => oneOrder.status === "delivering"
@@ -23,13 +33,13 @@ export default function Orders() {
     <>
       <Header img={mesero} view={'waiter'} nav={<NavWaiter/>}/>
       <div className={style.containerOrdersToDeliver}>
-        {ordersToDeliver.map(oneOrder => (
-          <ChefOrders key={oneOrder.id}
+        {ordersToDeliver.map((oneOrder,i) => (
+          <ChefOrders key={i}
           id={oneOrder.id}
           client={oneOrder.client}
           products={oneOrder.products}
           status={oneOrder.status}
-          onPutOrders={() => putOrdersToDelivered(oneOrder, oneOrder.id)}/>
+          onPutOrders={() => handleUpdateOrders(allOrders,oneOrder, oneOrder.id,"delivered")}/>
         ))}
       </div>
     </>

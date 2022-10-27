@@ -43,6 +43,7 @@ server.post("/orders", async (req, res) => {
     };
     const orders = router.db.get("orders");
     console.log(orders);
+    order.id = orders.__wrapped__.orders.length + 1;
 
     const result = await orders.push(order).write();
     console.log("result", result);
