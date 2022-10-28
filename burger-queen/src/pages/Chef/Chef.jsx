@@ -14,6 +14,15 @@ function Chef() {
     getOrders(setAllOrders);
   }, []);
 
+  const handleUpdate = async(allOrders, order, id, text)=>{
+    const newAllOrders = [...allOrders]
+    const response = await putOrders( order, id,text)
+    console.log(response)
+    if(response){
+      setAllOrders(newAllOrders)
+    }
+  }
+
   const newOrders = allOrders.filter(
     (oneOrder) => oneOrder.status === "pending"
   );
@@ -29,14 +38,14 @@ function Chef() {
     <>
       <Header img={chef} view={"chef"} nav={<NavChef />} />
       <div className={style.containerPendingOrders}>
-        {newOrders.map((oneOrder) => (
+        {newOrders.map((oneOrder,i) => (
           <ChefOrders
-            key={oneOrder.id}
+            key={i}
             id={oneOrder.id}
             client={oneOrder.client}
             products={oneOrder.products}
             status={oneOrder.status}
-            onPutOrders={() => putOrders(oneOrder, oneOrder.id)}
+            onPutOrders={() => handleUpdate(allOrders,oneOrder, oneOrder.id,"delivering")}
           />
         ))}
       </div>

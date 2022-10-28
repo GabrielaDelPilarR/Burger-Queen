@@ -189,7 +189,7 @@
     {
       "id": "005",
       "userId": "mesero1",
-      "client": "Cliente 6",
+      "client": "Cliente",
       "products": [
         {
           "name": "Café americano",
@@ -197,14 +197,19 @@
           "quantity": 1
         },
         {
+          "name": "Café con leche",
+          "price": 7,
+          "quantity": 1
+        },
+        {
           "name": "Sandwich de jamón y queso",
-          "price": 20,
-          "quantity": 2
+          "price": 10,
+          "quantity": 1
         }
       ],
       "status": "delivered",
-      "dateEntry": "10/24/2022",
-      "dateProcessed": "10/25/2022"
+      "dateEntry": "10/26/2022",
+      "dateProcessed": ""
     },
     {
       "id": "006",
@@ -242,12 +247,12 @@
           "quantity": 2
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "dateEntry": "10/25/2022",
       "dateProcessed": ""
     },
     {
-      "id": "005",
+      "id": "008",
       "userId": "mesero1",
       "client": "Cliente",
       "products": [
@@ -269,6 +274,31 @@
       ],
       "status": "pending",
       "dateEntry": "10/26/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": 9,
+      "userId": "mesero1",
+      "client": "Diana",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Papas fritas",
+          "price": 10,
+          "quantity": 2
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "10/27/2022",
       "dateProcessed": ""
     }
   ]

@@ -4,7 +4,7 @@ const token = JSON.parse(localStorage.getItem("users"));
 
 const postOrder = async (client, order) => {
   const newOrder = {
-    id: "005",
+    id: "",
     userId: "mesero1",
     client,
     products: order.map((item) => {

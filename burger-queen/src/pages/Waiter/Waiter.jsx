@@ -56,7 +56,7 @@ export default function Waiter() {
     setProductsInOrder(deletedProduct);
   };
 
-  const borraYaPlis = () => setProductsInOrder([])
+  const resetOrder = () => setProductsInOrder([]);
 
   let total = 0;
   productsInOrder.forEach((item) => {
@@ -95,9 +95,8 @@ export default function Waiter() {
           items={productsInOrder}
           total={total}
           onDeleteItem={deleteItem}
-          onSendOrder={borraYaPlis}
-        >
-        </OrderSheet>
+          onSendOrder={resetOrder}
+        ></OrderSheet>
       </div>
     </>
   );
