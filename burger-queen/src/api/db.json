@@ -200,6 +200,36 @@
       "status": "delivering",
       "dateEntry": "10/26/2022",
       "dateProcessed": ""
+    },
+    {
+      "id": 4,
+      "userId": "mesero1",
+      "client": "gabriela",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Café con leche",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "quantity": 1
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        }
+      ],
+      "status": "delivering",
+      "dateEntry": "10/27/2022",
+      "dateProcessed": ""
     }
   ]
 }
