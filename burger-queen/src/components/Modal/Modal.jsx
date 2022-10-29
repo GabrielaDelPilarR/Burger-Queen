@@ -32,4 +32,18 @@ function ModalSendOrder({ children, state }) {
   );
 }
 
-export { Modal, ModalSendOrder };
+function ModalCreateUsers({state,onChangeState}){
+  return(
+    <>
+  {state &&
+    <div className={style.modalCard}>
+      <label></label>
+      <input></input>
+      <button onClick={()=>onChangeState(false)}>Crear</button>
+    </div>
+  }
+    </>
+  )
+}
+
+export { Modal, ModalSendOrder,ModalCreateUsers };

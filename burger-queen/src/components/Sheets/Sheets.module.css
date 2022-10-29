@@ -64,16 +64,24 @@
     border: none;
 }
 
-.buttonOrder, .pendingButton, .sendOrderButton{
+.buttonOrder, .pendingButton, .sendOrderButton, .deliveringButton{
     font-size: 1rem;
-    color: #F24A72;
     border-radius: 0.5rem;
-    background: #FFB4B4; 
     border: none;
     font-weight: 700;
-    cursor: pointer;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
+}
+
+.buttonOrder, .sendOrderButton, .deliveringButton {
+    color: #F24A72;
+    background: #FFB4B4;
+    cursor: pointer;
+}
+
+.pendingButton {
+    background: #F24A72;
+    color: #FFF;
 }
 
 .buttonContainer {

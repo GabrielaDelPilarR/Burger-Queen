@@ -107,39 +107,29 @@
   ],
   "orders": [
     {
-      "id": 1,
+      "id": "001",
       "userId": "mesero1",
-      "client": "Carol",
+      "client": "Cliente",
       "products": [
         {
-          "name": "Café con leche",
-          "price": 14,
+          "name": "Café americano",
+          "price": 10,
           "quantity": 2
-        },
-        {
-          "name": "Jugo de frutas al natural",
-          "price": 7,
-          "quantity": 1
         }
       ],
       "status": "delivered",
-      "dateEntry": "10/26/2022",
-      "dateProcessed": "10/26/2022"
+      "dateEntry": "10/24/2022",
+      "dateProcessed": "10/24/2022"
     },
     {
-      "id": 2,
+      "id": "002",
       "userId": "mesero1",
-      "client": "dianita123",
+      "client": "Cliente 2",
       "products": [
         {
           "name": "Papas fritas",
-          "price": 5,
-          "quantity": 1
-        },
-        {
-          "name": "Aros de cebolla",
-          "price": 5,
-          "quantity": 1
+          "price": 10,
+          "quantity": 2
         },
         {
           "name": "Agua 500ml",
@@ -147,19 +137,59 @@
           "quantity": 1
         },
         {
-          "name": "Gaseosa 500ml",
-          "price": 7,
+          "name": "Hamburguesa simple",
+          "price": 10,
           "quantity": 1
         }
       ],
       "status": "delivered",
-      "dateEntry": "10/26/2022",
-      "dateProcessed": ""
+      "dateEntry": "10/24/2022",
+      "dateProcessed": "10/25/2022"
     },
     {
-      "id": 3,
+      "id": "003",
       "userId": "mesero1",
-      "client": "karlita",
+      "client": "Cliente 3",
+      "products": [
+        {
+          "name": "Hamburguesa con queso",
+          "price": 30,
+          "quantity": 2
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 5,
+          "quantity": 1
+        }
+      ],
+      "status": "delivered",
+      "dateEntry": "10/24/2022",
+      "dateProcessed": "10/24/2022"
+    },
+    {
+      "id": "004",
+      "userId": "mesero1",
+      "client": "Cliente 4",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "quantity": 1
+        }
+      ],
+      "status": "delivered",
+      "dateEntry": "10/24/2022",
+      "dateProcessed": "10/24/2022"
+    },
+    {
+      "id": "005",
+      "userId": "mesero1",
+      "client": "Cliente",
       "products": [
         {
           "name": "Café americano",
@@ -175,30 +205,100 @@
           "name": "Sandwich de jamón y queso",
           "price": 10,
           "quantity": 1
-        },
+        }
+      ],
+      "status": "delivered",
+      "dateEntry": "10/26/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": "006",
+      "userId": "mesero1",
+      "client": "Cliente 6",
+      "products": [
         {
-          "name": "Hamburguesa simple",
-          "price": 10,
+          "name": "Café americano",
+          "price": 5,
           "quantity": 1
         },
         {
-          "name": "Hamburguesa doble",
-          "price": 15,
+          "name": "Sandwich de jamón y queso",
+          "price": 20,
+          "quantity": 2
+        }
+      ],
+      "status": "delivered",
+      "dateEntry": "10/24/2022",
+      "dateProcessed": "10/26/2022"
+    },
+    {
+      "id": "007",
+      "userId": "mesero1",
+      "client": "Gabriela",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
           "quantity": 1
         },
         {
-          "name": "Hamburguesa con huevo",
-          "price": 15,
-          "quantity": 1
-        },
-        {
-          "name": "Hamburguesa con queso",
-          "price": 15,
-          "quantity": 1
+          "name": "Sandwich de jamón y queso",
+          "price": 20,
+          "quantity": 2
         }
       ],
       "status": "delivering",
+      "dateEntry": "10/25/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": "008",
+      "userId": "mesero1",
+      "client": "Cliente",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Café con leche",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
       "dateEntry": "10/26/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": 9,
+      "userId": "mesero1",
+      "client": "Diana",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Papas fritas",
+          "price": 10,
+          "quantity": 2
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "10/27/2022",
       "dateProcessed": ""
     },
     {

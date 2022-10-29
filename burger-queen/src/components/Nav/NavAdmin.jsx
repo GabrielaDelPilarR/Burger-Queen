@@ -4,7 +4,7 @@ export default function NavAdmin () {
     return (
         <>
             <a href="/admin">Registro de personal</a>
-            <a href="/admin">Historial de pedidos</a>
+            <a href="/all-orders">Historial de pedidos</a>
         </>
     )
 }
