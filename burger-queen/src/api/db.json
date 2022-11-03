@@ -115,57 +115,28 @@
     {
       "email": "diana@gmail.com",
       "password": "12345",
-      "id": "OyB1tT0"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "CjLQXWl"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "2SYm3O-"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "TwEbkWh"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "dxjp9PL"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "PXXwJ-t"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "b2tt68s"
-    },
-    {
-      "email": "diana@gmail.com",
-      "password": "12345",
-      "id": "n2pGjYV"
-    },
-    {
-      "email": "diana@gmail.com",
-      "password": "12345",
-      "id": "lwppgaw"
-    },
-    {
-      "email": "diana@gmail.com",
-      "password": "12345",
       "id": "e4L4L0G"
     },
     {
       "email": "",
       "password": "",
       "id": "5zYHyWc"
+    },
+    {
+      "email": "lucia@burger.com",
+      "password": "12345",
+      "roles": {
+        "role": "chef"
+      },
+      "id": "fUM7sG7"
+    },
+    {
+      "email": "vanessa@burger.com",
+      "password": "12345",
+      "roles": {
+        "role": "mesero"
+      },
+      "id": "D-Kwj-I"
     }
   ],
   "orders": [
@@ -392,6 +363,26 @@
       ],
       "status": "delivering",
       "dateEntry": "10/27/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": 11,
+      "userId": "mesero1",
+      "client": "Otro cliente",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "11/3/2022",
       "dateProcessed": ""
     }
   ]

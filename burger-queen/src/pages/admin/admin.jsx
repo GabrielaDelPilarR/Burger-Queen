@@ -20,7 +20,8 @@ export default function Admin() {
     if (email === "" && password === "" && role === "") {
         setModalCreate(false);
     } else {
-         postUser(email, password, role)
+         postUser(email, password, role);
+         setModalCreate(false);
     }
   }
   
