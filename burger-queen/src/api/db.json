@@ -103,6 +103,69 @@
       "email": "maria@gmail.com",
       "password": "1234",
       "roles": "waiter"
+    },
+    {
+      "email": "mesero10@burger.com",
+      "password": "12345",
+      "roles": {
+        "mesero": true
+      },
+      "id": "Psisi2M"
+    },
+    {
+      "email": "diana@gmail.com",
+      "password": "12345",
+      "id": "OyB1tT0"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "CjLQXWl"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "2SYm3O-"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "TwEbkWh"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "dxjp9PL"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "PXXwJ-t"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "b2tt68s"
+    },
+    {
+      "email": "diana@gmail.com",
+      "password": "12345",
+      "id": "n2pGjYV"
+    },
+    {
+      "email": "diana@gmail.com",
+      "password": "12345",
+      "id": "lwppgaw"
+    },
+    {
+      "email": "diana@gmail.com",
+      "password": "12345",
+      "id": "e4L4L0G"
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": "5zYHyWc"
     }
   ],
   "orders": [
