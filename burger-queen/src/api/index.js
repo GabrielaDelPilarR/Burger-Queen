@@ -3,7 +3,16 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
-const secret = "EsUnSecreto";
+//const secret = "EsUnSecreto";
+
+const adminToken =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSIsInJvbGVzIjp7ImFkbWluIjp0cnVlfX0sImlhdCI6MTY2NzQzMzAyNCwiZXhwIjoxNjY3NTE5NDI0fQ._K8Mm-ypcP1tt8A4i5fyYvmc_oyKBwy6abxyEjXiG2o";
+  
+const waiterToken =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoibWVzZXJvMWJxQGdtYWlsLmNvbSIsInJvbGVzIjp7Im1lc2VybyI6dHJ1ZX19LCJpYXQiOjE2Njc0NDEwMjMsImV4cCI6MTY2NzUyNzQyM30.1xGf_qVVgqvPcb6dg7vxfV-MbeCcjEk110xnCudJgyk";
+
+const chefToken =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoiY2hlZjFicUBnbWFpbC5jb20iLCJyb2xlcyI6eyJjaGVmIjp0cnVlfX0sImlhdCI6MTY2NzQ0MDMwNywiZXhwIjoxNjY3NTI2NzA3fQ.naUWxKr1AEyPDO6QLGAd95Z2WSgXbYhpIN5Tm87CNvE";
 
 server.use(jsonServer.bodyParser);
 server.use(middlewares);
@@ -13,7 +22,7 @@ server.use((req, res, next) => {
 
   if (req.method === "POST" && req.path === "/auth") {
     next();
-  } else if (req.headers.authorization === `Bearer ${secret}`) {
+  } else if (req.headers.authorization === `Bearer ${adminToken}` || req.headers.authorization === `Bearer ${chefToken}`|| req.headers.authorization === `Bearer ${waiterToken}`) {
     next();
   } else {
     res.sendStatus(401);
@@ -21,17 +30,52 @@ server.use((req, res, next) => {
 });
 
 server.post("/auth", (req, res) => {
-  if (req.body.email === "maria@gmail.com" && req.body.password === "1234") {
+  const users = [
+    {
+      email: "admin2@gmail.com",
+      password: "12345",
+    },
+    {
+      email: "mesero1bq@gmail.com",
+      password: "12345",
+    },
+    {
+      email: "chef1bq@gmail.com",
+      password: "12345",
+    },
+  ];
+
+  const userEmail = users.map((user) => user.email);
+  const userPassword = users.map((user) => user.password);
+
+  console.log(userEmail, userPassword);
+
+  if (
+    userEmail.includes(req.body.email) &&
+    userPassword.includes(req.body.password)
+  ) {
+    if (req.body.email === "admin2@gmail.com")
+      res.jsonp({
+        token: adminToken,
+      });
+  }
+  if (req.body.email === "mesero1bq@gmail.com") {
     res.jsonp({
-      token: secret,
+      token: waiterToken,
     });
-  } else res.status(400).send("Bad Request");
+  }
+  if (req.body.email === "chef1bq@gmail.com") {
+    res.jsonp({
+      token: chefToken,
+    });
+  } else {
+    res.status(400).send("Bad Request")};
 });
 
 server.post("/orders", async (req, res) => {
   try {
     const today = new Date();
-    const now = today.toLocaleDateString('en-US');
+    const now = today.toLocaleDateString("en-US");
     const order = {
       id: req.body.id,
       userId: req.body.userId,
@@ -39,7 +83,7 @@ server.post("/orders", async (req, res) => {
       products: req.body.products,
       status: "pending",
       dateEntry: now,
-      dateProcessed: ''
+      dateProcessed: "",
     };
     const orders = router.db.get("orders");
     console.log(orders);

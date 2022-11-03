@@ -11,20 +11,45 @@ function Login() {
   const [modalVisibility, setModalVisibility] = useState(false);
   const navigate = useNavigate();
 
+  function parseJwt(token) {
+    const base64Url = token.split(".")[1];
+    const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+    const jsonPayload = decodeURIComponent(
+      window
+        .atob(base64)
+        .split("")
+        .map((c) => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2))
+        .join("")
+    );
+
+    return JSON.parse(jsonPayload);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === "") {
       setModalVisibility(true);
     }
 
-    const API_URL = "http://localhost:3001/auth";
+    const API_URL = "https://bqapi.fakel.lol/auth";
 
     axios
       .post(`${API_URL}`, { email, password })
       .then((res) => {
         if (res.status === 200) {
+          const jwtObject = parseJwt(res.data.token);
+
           localStorage.setItem("users", JSON.stringify(res.data.token));
-          navigate("/products");
+
+          if (jwtObject.payload.roles.mesero === true) {
+            navigate("/products");
+          }
+          if (jwtObject.payload.roles.chef === true) {
+            navigate("/chef");
+          }
+          if (jwtObject.payload.roles.admin === true) {
+            navigate("/admin");
+          }
         }
       })
       .catch((err) => setModalVisibility(true));

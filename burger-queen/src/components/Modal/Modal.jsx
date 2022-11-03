@@ -32,30 +32,19 @@ function ModalSendOrder({ children, state }) {
   );
 }
 
-function ModalCreateUsers({state,onChangeState}){
-  return(
+function ModalCreateUsers({ children, state }) {
+  return (
     <>
-  {state &&
-    <div className={style.backgroundModal}>
-    <div className={style.modalCardUser}>
-      <label>Nombre y apellido</label>
-      <input type="text"></input>
-      <label>Email</label>
-      <input type="text"></input>
-      <label>Contraseña</label>
-      <input type="text"></input>
-      <label>Funcion</label>
-      <select multiple="multiple">
-        <option>Mesero</option>
-        <option>Cocinero</option>
-      </select>
-
-      <button className= {style.buttonUser} onClick={()=>onChangeState(false)}>Crear</button>
-    </div>
-    </div>
-  }
+      {state && (
+        <div className={style.backgroundModal}>
+          <div className={style.modalCard}>
+            <h2>Crea un nuevo usuario</h2>
+            {children}
+          </div>
+        </div>
+      )}
     </>
-  )
+  );
 }
 
-export { Modal, ModalSendOrder,ModalCreateUsers };
+export { Modal, ModalSendOrder, ModalCreateUsers };
