@@ -32,37 +32,14 @@ function ModalSendOrder({ children, state }) {
   );
 }
 
-function ModalCreateUsers({ state, onChangeState }) {
+function ModalCreateUsers({ children, state }) {
   return (
     <>
       {state && (
         <div className={style.backgroundModal}>
           <div className={style.modalCard}>
             <h2>Crea un nuevo usuario</h2>
-            <form className={style.createUsersForm}>
-              <div>
-              <label htmlFor="user">Usuario: </label>
-              <input placeholder="User"></input>
-            </div>
-            <div>
-              <label htmlFor="email">Email: </label>
-              <input placeholder="email@example.com"></input>
-            </div>
-            <div>
-              <label htmlFor="password">Contraseña: </label>
-              <input placeholder="****"></input>
-            </div>
-            <div>
-              <label htmlFor="function">Función: </label>
-              <input placeholder="¿Waiter, chef or admin?"></input>
-            </div>
-            <button
-              className={style.buttonModal}
-              onClick={() => onChangeState(false)}
-            >
-              Crear
-            </button>
-            </form>
+            {children}
           </div>
         </div>
       )}

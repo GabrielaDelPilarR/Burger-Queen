@@ -6,12 +6,13 @@ const middlewares = jsonServer.defaults();
 //const secret = "EsUnSecreto";
 
 const adminToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSIsInJvbGVzIjp7ImFkbWluIjp0cnVlfX0sImlhdCI6MTY2NzQzMzAyNCwiZXhwIjoxNjY3NTE5NDI0fQ.X936EikYBxKjWdPqvMHvUfrRiRcp1pYzs5-DkqwhMns";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoiYWRtaW4yQGdtYWlsLmNvbSIsInJvbGVzIjp7ImFkbWluIjp0cnVlfX0sImlhdCI6MTY2NzQzMzAyNCwiZXhwIjoxNjY3NTE5NDI0fQ._K8Mm-ypcP1tt8A4i5fyYvmc_oyKBwy6abxyEjXiG2o";
+  
 const waiterToken =
-  "$2b$10$OVuh837Qg4Vs1Mq1wJKB4udIqdugT1/TJ0nCwR9vht2dZBj8S9kGy";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoibWVzZXJvMWJxQGdtYWlsLmNvbSIsInJvbGVzIjp7Im1lc2VybyI6dHJ1ZX19LCJpYXQiOjE2Njc0NDEwMjMsImV4cCI6MTY2NzUyNzQyM30.1xGf_qVVgqvPcb6dg7vxfV-MbeCcjEk110xnCudJgyk";
 
 const chefToken =
-  "$2b$10$Mf23YiWWQPwb2g/iDjxHa.SW2H2lG4ypYm/I5kM9p/BNtroDLwq9S";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImVtYWlsIjoiY2hlZjFicUBnbWFpbC5jb20iLCJyb2xlcyI6eyJjaGVmIjp0cnVlfX0sImlhdCI6MTY2NzQ0MDMwNywiZXhwIjoxNjY3NTI2NzA3fQ.naUWxKr1AEyPDO6QLGAd95Z2WSgXbYhpIN5Tm87CNvE";
 
 server.use(jsonServer.bodyParser);
 server.use(middlewares);
@@ -67,7 +68,8 @@ server.post("/auth", (req, res) => {
     res.jsonp({
       token: chefToken,
     });
-  } else res.status(400).send("Bad Request");
+  } else {
+    res.status(400).send("Bad Request")};
 });
 
 server.post("/orders", async (req, res) => {
