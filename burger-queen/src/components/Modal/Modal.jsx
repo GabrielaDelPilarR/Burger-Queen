@@ -32,18 +32,42 @@ function ModalSendOrder({ children, state }) {
   );
 }
 
-function ModalCreateUsers({state,onChangeState}){
-  return(
+function ModalCreateUsers({ state, onChangeState }) {
+  return (
     <>
-  {state &&
-    <div className={style.modalCard}>
-      <label></label>
-      <input></input>
-      <button onClick={()=>onChangeState(false)}>Crear</button>
-    </div>
-  }
+      {state && (
+        <div className={style.backgroundModal}>
+          <div className={style.modalCard}>
+            <h2>Crea un nuevo usuario</h2>
+            <form className={style.createUsersForm}>
+              <div>
+              <label htmlFor="user">Usuario: </label>
+              <input placeholder="User"></input>
+            </div>
+            <div>
+              <label htmlFor="email">Email: </label>
+              <input placeholder="email@example.com"></input>
+            </div>
+            <div>
+              <label htmlFor="password">Contraseña: </label>
+              <input placeholder="****"></input>
+            </div>
+            <div>
+              <label htmlFor="function">Función: </label>
+              <input placeholder="¿Waiter, chef or admin?"></input>
+            </div>
+            <button
+              className={style.buttonModal}
+              onClick={() => onChangeState(false)}
+            >
+              Crear
+            </button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
-  )
+  );
 }
 
-export { Modal, ModalSendOrder,ModalCreateUsers };
+export { Modal, ModalSendOrder, ModalCreateUsers };

@@ -6,8 +6,8 @@ import Waiter from "./pages/Waiter/Waiter";
 import Orders from "./pages/Waiter/ViewOrders";
 import Chef from "./pages/Chef/Chef";
 import ViewPreparedOrders from "./pages/Chef/ViewPrepared";
-import AllOrders from "./pages/admin/AllOrders";
-import Admin from "./pages/admin/Admin.jsx"
+import AllOrders from "./pages/Admin/AllOrders";
+import Admin from "./pages/Admin/Admin.jsx"
 
 function App() {
   return (
