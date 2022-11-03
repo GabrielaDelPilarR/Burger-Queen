@@ -31,7 +31,7 @@ function Login() {
       setModalVisibility(true);
     }
 
-    const API_URL = "https://bqapi.fakel.lol/auth";
+    const API_URL = "http://localhost:3001/auth";
 
     axios
       .post(`${API_URL}`, { email, password })

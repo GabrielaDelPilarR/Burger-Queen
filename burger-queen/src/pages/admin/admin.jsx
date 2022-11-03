@@ -15,6 +15,16 @@ export default function Admin() {
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (email === "" && password === "" && role === "") {
+        setModalCreate(false);
+    } else {
+         postUser(email, password, role);
+         setModalCreate(false);
+    }
+  }
+  
   return (
     <>
       <Header img={admin} view={"admin"} nav={<NavAdmin></NavAdmin>} />
@@ -42,14 +52,13 @@ export default function Admin() {
               <img className={style.options} src={btn} alt={"delete"}></img>
             </p>
             <p>
-              {" "}
               <img className={style.options} src={edit} alt={"edit"}></img>
             </p>
           </div>
         </div>
       </div>
       <ModalCreateUsers state={modalCreate}>
-        <form className={style.createUsersForm} onSubmit={() => postUser(email,password, role)}>
+        <form className={style.createUsersForm} onSubmit={handleSubmit}>
           <div>
             <label htmlFor="user">Usuario: </label>
             <input placeholder="User"></input>
@@ -70,9 +79,7 @@ export default function Admin() {
             <label htmlFor="function">Función: </label>
             <input placeholder="¿Waiter, chef or admin?" value={role} onChange={(e) => setRole(e.target.value)}></input>
           </div>
-          <button className={style.buttonModal} onClick={()=> setModalCreate(false)}>
-            Crear
-          </button>
+          <button className={style.buttonModal}>Crear</button>
         </form>
       </ModalCreateUsers>
     </>

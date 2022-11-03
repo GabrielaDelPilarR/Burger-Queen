@@ -2,13 +2,14 @@ import axios from "axios";
 const API_URL = "http://localhost:3001/users";
 const token = JSON.parse(localStorage.getItem("users"));
 
-const postUser = async (email, password, userRole) => {
+const postUser = async (email, password, role) => {
+
   const newUser = {
     email,
     password,
     roles: {
-      userRole: true,
-    },
+        role
+    }
   };
 
   const req = await axios.post(API_URL, newUser, {
