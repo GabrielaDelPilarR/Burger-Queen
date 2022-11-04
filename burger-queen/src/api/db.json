@@ -99,44 +99,15 @@
   ],
   "users": [
     {
-      "id": "001",
-      "email": "maria@gmail.com",
+      "name": "Fabiola",
+      "email": "mesero12@burger.com",
       "password": "1234",
-      "roles": "waiter"
-    },
-    {
-      "email": "mesero10@burger.com",
-      "password": "12345",
       "roles": {
-        "mesero": true
+        "admin": false,
+        "chef": true,
+        "mesero": false
       },
-      "id": "Psisi2M"
-    },
-    {
-      "email": "diana@gmail.com",
-      "password": "12345",
-      "id": "e4L4L0G"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": "5zYHyWc"
-    },
-    {
-      "email": "lucia@burger.com",
-      "password": "12345",
-      "roles": {
-        "role": "chef"
-      },
-      "id": "fUM7sG7"
-    },
-    {
-      "email": "vanessa@burger.com",
-      "password": "12345",
-      "roles": {
-        "role": "mesero"
-      },
-      "id": "D-Kwj-I"
+      "id": "39VR7yt"
     }
   ],
   "orders": [
