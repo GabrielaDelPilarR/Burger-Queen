@@ -20,7 +20,6 @@ function AllOrders() {
           <div className={style.th}>
             <h3>Cliente</h3>
             <h3>Estado</h3>
-            <h3>Tiempo de demora</h3>
             <h3>Total</h3>
           </div>
           <div className={style.containerOrders}>
@@ -35,7 +34,6 @@ function AllOrders() {
                 <div className={style.oneOrder} key={order.id}>
                   <p>{order.client}</p>
                   <p>{order.status}</p>
-                  <p>Se demoró:</p>
                   <p>S/.{totalPerOrder(order.products)}</p>
                 </div>
               );

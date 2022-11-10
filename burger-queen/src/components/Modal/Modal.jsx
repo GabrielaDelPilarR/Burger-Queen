@@ -1,5 +1,6 @@
 import style from "./Modal.module.css";
 
+
 function Modal({ children, state, onChangeState }) {
   return (
     <>
@@ -38,7 +39,6 @@ function ModalCreateUsers({ children, state }) {
       {state && (
         <div className={style.backgroundModal}>
           <div className={style.modalCard}>
-            <h2>Crea un nuevo usuario</h2>
             {children}
           </div>
         </div>
@@ -47,4 +47,21 @@ function ModalCreateUsers({ children, state }) {
   );
 }
 
-export { Modal, ModalSendOrder, ModalCreateUsers };
+function ModalDeleteUsers({children,state}) {
+  return (
+    <>
+      {state && (
+        <div className={style.backgroundModal}>
+          <div className={style.modalCard}>
+            {children}
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+
+
+
+export { Modal, ModalSendOrder, ModalCreateUsers, ModalDeleteUsers };

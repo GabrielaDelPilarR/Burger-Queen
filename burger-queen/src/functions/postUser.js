@@ -2,23 +2,22 @@ import axios from "axios";
 const API_URL = "http://localhost:3001/users";
 const token = JSON.parse(localStorage.getItem("users"));
 
-const postUser = async (email, password, role) => {
+const postUser = async (name, email, password, role) => {
 
   const newUser = {
+    name,
     email,
     password,
-    roles: {
-        role
-    }
+    role,
   };
 
-  const req = await axios.post(API_URL, newUser, {
+  const res = await axios.post(API_URL, newUser, {
     headers: {
       authorization: `Bearer ${token}`,
     },
   });
 
-  console.log(req)
+  return res.data
 };
 
 export default postUser;

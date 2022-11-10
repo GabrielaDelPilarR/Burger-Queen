@@ -62,7 +62,7 @@ function Login() {
       </div>
       <div className={style.backgroundForm}>
         <h1> BURGER QUEEN </h1>
-        <form onSubmit={handleSubmit}>
+        <form className={style.formLogin}onSubmit={handleSubmit}>
           <p> Ingresa tus credenciales </p>
           <input
             type="text"

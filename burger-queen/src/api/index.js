@@ -32,15 +32,15 @@ server.use((req, res, next) => {
 server.post("/auth", (req, res) => {
   const users = [
     {
-      email: "admin2@gmail.com",
+      email: "admin@burger.com",
       password: "12345",
     },
     {
-      email: "mesero1bq@gmail.com",
+      email: "mesero@burger.com",
       password: "12345",
     },
     {
-      email: "chef1bq@gmail.com",
+      email: "chef@burger.com",
       password: "12345",
     },
   ];
@@ -54,17 +54,17 @@ server.post("/auth", (req, res) => {
     userEmail.includes(req.body.email) &&
     userPassword.includes(req.body.password)
   ) {
-    if (req.body.email === "admin2@gmail.com")
+    if (req.body.email === "admin@burger.com")
       res.jsonp({
         token: adminToken,
       });
   }
-  if (req.body.email === "mesero1bq@gmail.com") {
+  if (req.body.email === "mesero@burger.com") {
     res.jsonp({
       token: waiterToken,
     });
   }
-  if (req.body.email === "chef1bq@gmail.com") {
+  if (req.body.email === "chef@burger.com") {
     res.jsonp({
       token: chefToken,
     });

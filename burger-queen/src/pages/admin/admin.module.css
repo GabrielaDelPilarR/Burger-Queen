@@ -31,7 +31,7 @@
 .th {
     color: #EB6105;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
 }
 
@@ -61,7 +61,7 @@
 }
 .oneOrder {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
 }
 
@@ -88,4 +88,26 @@
     font-weight: 700;
     padding: 0.5rem 0.75rem;
     text-transform: uppercase;
+}
+
+.btnOptions{
+    border: none;
+    background-color: transparent;
+}
+
+.createTitle{
+    margin-block-start: 2rem;
+}
+
+.btnClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.close{
+    width: 50px;
 }

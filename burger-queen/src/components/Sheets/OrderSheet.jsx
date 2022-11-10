@@ -2,14 +2,18 @@ import { useState } from "react";
 import style from "./Sheets.module.css";
 import postOrder from "../../functions/postOrders";
 import { Modal, ModalSendOrder } from "../Modal/Modal";
+import error from "../../img/error.png"
+import comprobado from "../../img/comprobado.png"
 
 function OrderSheet({ items, total, onDeleteItem, onSendOrder }) {
   const [client, setClient] = useState("");
   const [modalVisibilityError, setModalVisibilityError] = useState(false);
   const [modalVisibilityOrder, setModalVisibilityOrder] = useState(false);
+  const [imgOrder, setImgOrder] = useState(true)
 
   const fullOrder = items.map((item) => {
     return (
+      
       <div className={style.item} key={item.id}>
         <p className={style.itemName}> {item.name}</p>
         <p> S/.{item.price} </p>
@@ -29,11 +33,15 @@ function OrderSheet({ items, total, onDeleteItem, onSendOrder }) {
       <div className={style.orderSheet}>
         <label htmlFor="client"> Cliente : </label>
         <input
+          className={style.inputClient}
           type="text"
           value={client}
           onChange={(e) => setClient(e.target.value)}
         />
-        <div className={style.containerItem}>{fullOrder}</div>
+        <div className={style.containerItem}>
+          
+          {fullOrder}
+        </div>
         <div className={style.item}>
           <p> TOTAL </p>
           <p> s/.{total} </p>
@@ -56,11 +64,13 @@ function OrderSheet({ items, total, onDeleteItem, onSendOrder }) {
         state={modalVisibilityError}
         onChangeState={setModalVisibilityError}
       >
+        <img src={error} alt="error"></img>
         <h2> Error </h2>
         <p> Por favor completa todos los datos. </p>
       </Modal>
 
       <ModalSendOrder state={modalVisibilityOrder}>
+      <img src={comprobado} alt="error"></img>
         <h2> Pedido enviado </h2>
         <p> El pedido ha sido enviado con éxito. </p>
         <button

@@ -15,7 +15,7 @@
     width: fit-content;
     height: fit-content;
     background: #fff;
-    border-radius: 5PX;
+    border-radius: 9px;
     position: relative;
     box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
     padding: 1.5rem;
@@ -23,6 +23,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding-block-start: 4rem;
+    gap: 1rem;
 }
 
 .modalCard h2 {
@@ -41,7 +43,8 @@
 }
 
 label {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin: 0;
 }
 
@@ -56,3 +59,4 @@ label {
     flex-wrap: nowrap;
 
 }
+

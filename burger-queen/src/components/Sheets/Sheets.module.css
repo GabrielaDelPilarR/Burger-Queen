@@ -24,11 +24,11 @@
 }
 
 .containerItem {
-    width: 327px;
     height: 16rem;
     border: rgb(238, 237, 237);
     max-height: 16rem;
     overflow-y: auto;
+    margin-block-start: 1rem;
 }
 
 .containerItem::-webkit-scrollbar, .pendingProducts::-webkit-scrollbar{
@@ -108,4 +108,9 @@
 
 .pendingItem p {
     margin: 0.5rem;
+}
+
+.inputClient{
+    border-radius: 0;
+    border-block-end: 2px solid #F24A72;
 }
