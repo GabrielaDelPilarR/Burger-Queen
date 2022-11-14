@@ -9,7 +9,6 @@ function OrderSheet({ items, total, onDeleteItem, onSendOrder }) {
   const [client, setClient] = useState("");
   const [modalVisibilityError, setModalVisibilityError] = useState(false);
   const [modalVisibilityOrder, setModalVisibilityOrder] = useState(false);
-  const [imgOrder, setImgOrder] = useState(true)
 
   const fullOrder = items.map((item) => {
     return (

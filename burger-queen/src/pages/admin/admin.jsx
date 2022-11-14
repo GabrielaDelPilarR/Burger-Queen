@@ -12,7 +12,7 @@ import getUsers from "../../functions/getUsers.js";
 import { putUser } from "../../functions/putUsers.js";
 import deleteUsers from "../../functions/deleteUsers.js";
 import close from "../../img/cerrar.png"
-import { ModalDeleteUsers } from "../../components/Modal/Modal.jsx";
+
 
 export default function Admin() {
   const [modalCreate, setModalCreate] = useState(false);
@@ -22,7 +22,6 @@ export default function Admin() {
   const [role, setRole] = useState("");
   const [users, setUsers] = useState([])
   const [modalEdit, setModalEdit] = useState(false);
-  const [modalDelete, setModalDelete] = useState(false);
   const [newRole, setNewRole] = useState("");
   const [newPassword, setNewPassword] = useState("");
 

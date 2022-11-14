@@ -125,6 +125,13 @@
       "password": "hola",
       "role": "chef",
       "id": 4
+    },
+    {
+      "name": "Angelica",
+      "email": "mesrro@burger.com",
+      "password": "12345",
+      "role": "mesero",
+      "id": 5
     }
   ],
   "orders": [
@@ -236,6 +243,61 @@
       ],
       "status": "pending",
       "dateEntry": "11/9/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": 5,
+      "userId": "mesero1",
+      "client": "huhu",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 30,
+          "quantity": 3
+        },
+        {
+          "name": "Jugo de frutas al natural",
+          "price": 7,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "11/10/2022",
+      "dateProcessed": ""
+    },
+    {
+      "id": 6,
+      "userId": "mesero1",
+      "client": "Kelvin",
+      "products": [
+        {
+          "name": "Café americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Café con leche",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 30,
+          "quantity": 3
+        },
+        {
+          "name": "Papas fritas",
+          "price": 10,
+          "quantity": 2
+        }
+      ],
+      "status": "delivered",
+      "dateEntry": "11/10/2022",
       "dateProcessed": ""
     }
   ]
