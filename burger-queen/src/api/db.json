@@ -299,6 +299,46 @@
       "status": "delivered",
       "dateEntry": "11/10/2022",
       "dateProcessed": ""
+    },
+    {
+      "id": 7,
+      "userId": "mesero1",
+      "client": "fifi",
+      "products": [
+        {
+          "name": "Papas fritas",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Aros de cebolla",
+          "price": 30,
+          "quantity": 6
+        },
+        {
+          "name": "Gaseosa 500ml",
+          "price": 21,
+          "quantity": 3
+        },
+        {
+          "name": "Agua 500ml",
+          "price": 30,
+          "quantity": 6
+        },
+        {
+          "name": "Hamburguesa simple",
+          "price": 60,
+          "quantity": 6
+        },
+        {
+          "name": "Hamburguesa doble",
+          "price": 60,
+          "quantity": 4
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "1/25/2023",
+      "dateProcessed": ""
     }
   ]
 }
